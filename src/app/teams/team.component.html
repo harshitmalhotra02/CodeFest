@@ -1,0 +1,43 @@
+<header class="md-top-bar md-top-bar--blue" role="navigation">
+  <div class="md-top-bar__container">
+    <div class="md-top-bar__brand">
+      <a class="md-brand" href="/">
+        <div class="md-brand__logo md-brand__logo--pad">
+          <!-- Note: use either image or icon, but not both -->
+          <!-- img src="/assets/spark-logo.svg" alt="Momentum UI" -->
+          <i class="icon icon-cisco-logo"></i>
+        </div>
+        <div class="md-brand__title">Webex</div>
+      </a>
+    </div>
+    <nav class="md-top-bar__nav ">
+      <div class="md-list md-list--horizontal" role="list">
+        <a class="md-list-item active" role="listItem" href="/rooms">Rooms</a>
+        <a class="md-list-item" role="listItem" href="/teams">Teams</a>
+        <a class="md-list-item" role="listItem" href="/message">Message</a>
+        <a class="md-list-item" role="listItem" href="/member">Member</a>
+      </div>
+    </nav>
+    <div class="md-top-bar__right ">
+      <!-- Note: conditionally show top-bar__user or top-bar__logged-out -->
+       <div class="md-top-bar__user">
+          <button type="button" md-button color="red" (click)="onLogout()" disabled="disabled">Logout</button>
+       </div>
+    </div>
+  </div>
+</header>
+<div style="align-items:center;margin: auto;padding: 15px;line-height: 30px;position: absolute;
+width: 300px;
+height: 200px;
+z-index: 15;
+top: 50%;
+left: 50%;
+margin: -100px 0 0 -150px;" class="new-message-component">
+<input mdinput="" class="md-width" placeholder="Enter the Team name" class="md-input" [(ngModel)]="teamName">
+<br>
+<button md-button color="blue" (click)="onCreateTeam()">Create Team</button>
+<button md-button color="blue" (click)="listTeams()">List Team</button>
+<p>
+    Navigate back to <a href="" (click)="sendMeHome()"><strong>Home</strong></a>.
+  </p>
+</div>
